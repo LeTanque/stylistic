@@ -6,26 +6,6 @@ This project aims to provide an easy to use boilerplate for chrome extensions, s
 
 Not all extensions will need of all scripts or all types of messaging. All code snippets are optional. Text and images should be replaced with your own.
 
-## Installation
-
-Clone the repo:
-
-```
-git clone git@github.com:edrpls/chrome-extension-template.git name-of-your-project
-```
-
-Set git to track your own repository instead of this one:
-
-```
-git remote set-url --delete origin git@github.com:edrpls/chrome-extension-template.git # Remove old origin
-git remote set-url --add origin [YOUR REPO URL] # Add new origin
-```
-
-Install dependencies:
-
-```
-yarn install # or npm install
-```
 
 ## Usage
 
