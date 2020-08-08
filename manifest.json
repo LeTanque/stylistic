@@ -4,12 +4,11 @@
   "description": "stylistic by letanque",
   "version": "0.0.1",
   "manifest_version": 2,
-  "default_locale": "en",
   "update_url": "https://github.com/letanque/stylistic",
   "icons": {
-    "16": "icon-16.png",
-    "48": "icon-48.png",
-    "128": "icon-128.png"
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
   },
   "browser_action": {
     "default_title": "Boilerplate popup!",
@@ -28,10 +27,9 @@
       ]
     }
   ],
-  "background_page": "background.html",
   "background": {
     "scripts": [
-      "background.js"
+      "injectStyles.js"
     ],
     "persistent": false
   },

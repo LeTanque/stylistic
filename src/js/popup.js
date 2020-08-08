@@ -39,6 +39,10 @@ const initPopupScript = () => {
         console.log('popup.js - received message:', message);
     };
 
+    let getGreeting = document.getElementById("greeting")
+    getGreeting.textContent = "hello"
+
+
     // Find the current active tab, then open a port to it
     getTab().then(tab => {
         // Connects to tab port to enable communication with inContent.js

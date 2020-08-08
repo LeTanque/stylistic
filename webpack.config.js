@@ -1,7 +1,7 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Crx = require('crx-webpack-plugin');
-// const { version } = require('./package.json');
+const { version } = require('./package.json');
 
 module.exports = {
     entry: {
