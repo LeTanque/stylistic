@@ -1,12 +1,13 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const Crx = require('crx-webpack-plugin');
-const { version } = require('./package.json');
+// const { version } = require('./package.json');
 
 module.exports = {
     entry: {
         popup: './src/js/popup.js',
         background: './src/js/background.js',
+        "injectStyles": "./src/js/injectStyles.js",
         'in-content': './src/js/in-content.js'
     },
     output: {
@@ -31,6 +32,7 @@ module.exports = {
         new CopyWebpackPlugin([
             { from: './manifest.json' },
             { from: './src/images' },
+            { from: './src/styles' },
             { from: './src/views' }
         ])
     ]
