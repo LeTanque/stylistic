@@ -39,21 +39,3 @@ const handleBackgroundResponse = response =>
 // Send a message to background.js
 chrome.runtime.sendMessage('Message from in-content.js!', handleBackgroundResponse);
 
-
-// styles
-const path = chrome.extension.getURL("styles/compiled.css");
-let newLinkElement = document.createElement("link")
-
-newLinkElement.setAttribute("rel", "stylesheet")
-newLinkElement.setAttribute("type", "text/css")
-newLinkElement.setAttribute("href", path)
-
-console.log( '%c newLinkElement →→→ ', 'font-weight: bold', newLinkElement);
-
-let headElement = chrome
-headElement.appendChild(newLinkElement)
-console.log( '%c headElement →→→ ', 'font-weight: bold', headElement);
-
-// chrome.document.getElementsByTagName("head").appendChild(newLinkElement)
-
-

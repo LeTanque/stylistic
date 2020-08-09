@@ -19,8 +19,10 @@
       "matches": [
         "<all_urls>"
       ],
+      "run_at": "document_idle",
       "js": [
-        "in-content.js"
+        "in-content.js",
+        "injectStyles.js"
       ],
       "css": [
         "compiled.css"
@@ -39,5 +41,8 @@
     "tabs",
     "<all_urls>",
     "activeTab"
+  ],
+  "web_accessible_resources": [
+    "injectStyles.js"
   ]
 }

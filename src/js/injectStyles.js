@@ -1,10 +1,9 @@
+const path = chrome.extension.getURL("compiled.css");
 
-const path = chrome.extension.getURL("styles/compiled.css");
+let newLinkElement = document.createElement("link")
+newLinkElement.setAttribute("rel", "stylesheet")
+newLinkElement.setAttribute("type", "text/css")
+newLinkElement.setAttribute("href", path)
 
-const newLinkElement = document.createElement("link")
-.setAttribute("rel", "stylesheet")
-.setAttribute("type", "text/css")
-.setAttribute("href", path)
-
-document.getElementsByTagName("head").appendChild(newLinkElement)
+document.querySelector("head").appendChild(newLinkElement);
 
