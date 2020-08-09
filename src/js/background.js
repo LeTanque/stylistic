@@ -4,8 +4,10 @@
  *
  * It also shows how to handle short lived messages from other scripts, in this case, from in-content.js
  *
- * Note that not all extensions need of a background.js file, but extensions that need to persist data after a popup has closed may need of it.
+ * Note that not all extensions need of a background.js file, but extensions that
+ *  need to persist data after a popup has closed may need of it.
  */
+// import "./injectStyles";
 
 // A sample object that will be exposed further down and used on popup.js
 const sampleBackgroundGlobal = {
@@ -20,5 +22,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse('👍');
 });
 
+
+
 // Make variables accessible from chrome.extension.getBackgroundPage()
 window.sampleBackgroundGlobal = sampleBackgroundGlobal;
+
