@@ -155,7 +155,8 @@ function LocalNTP() {
         TILES: 'mv-tiles',
         TILES_IFRAME: 'mv-single',
         UNDO_LINK: 'mv-undo',
-        USER_CONTENT: 'user-content'
+        USER_CONTENT: 'user-content',
+        REACT_ROOT: 'reactRoot'
     };
 
     /**
@@ -863,7 +864,6 @@ function LocalNTP() {
         floatDownNotification(
             getElem(IDS.NOTIFICATION),
             getElem(IDS.NOTIFICATION_CONTAINER),
-            /*showPromo=*/ true
         );
     }
 
@@ -876,7 +876,10 @@ function LocalNTP() {
         // "tile was blacklisted" notification is shown.
         if (configData.isAccessibleBrowser) {
             document.body.style.setProperty('--mv-notice-time', '30s');
+        } else {
+            document.body.style.setProperty('--mv-notice-time', '10s');
         }
+  
 
         // Hide notifications after fade out, so we can't focus on links via keyboard.
         getElem(IDS.NOTIFICATION).addEventListener('transitionend', event => {

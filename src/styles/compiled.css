@@ -1,3 +1,14 @@
+@import "./colors.css";
+@import "./animations.css";
+@import "./customize.css";
+@import "./doodles.css";
+@import "./local-ntp-common.css";
+@import "./local-ntp.css";
+@import "./styles.css";
+@import "./theme.css";
+@import "./voice.css";
+
+
 .test {
   background-color: red;
   color: green;

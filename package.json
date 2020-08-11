@@ -6,9 +6,13 @@
     "repository": "git@github.com:edrpls/chrome-extension-template.git",
     "license": "MIT",
     "devDependencies": {
+        "@babel/core": "^7.11.1",
+        "@babel/plugin-syntax-jsx": "^7.10.4",
+        "@babel/preset-env": "^7.11.0",
+        "@babel/preset-react": "^7.10.4",
         "babel-cli": "^6.26.0",
         "babel-eslint": "^7.2.3",
-        "babel-loader": "^7.1.1",
+        "babel-loader": "^8.1.0",
         "babel-plugin-transform-object-rest-spread": "^6.26.0",
         "babel-plugin-transform-react-jsx": "^6.24.1",
         "babel-preset-env": "^1.6.1",
@@ -16,8 +20,10 @@
         "crx-webpack-plugin": "^0.1.5",
         "eslint": "^4.2.0",
         "eslint-plugin-react": "^7.1.0",
+        "nodemon": "^1.14.12",
         "rimraf": "^2.6.1",
-        "webpack": "^3.2.0"
+        "webpack": "^4.44.1",
+        "webpack-cli": "^3.3.12"
     },
     "scripts": {
         "start": "nodemon --exec yarn build",
@@ -36,6 +42,7 @@
         "verbose": true
     },
     "dependencies": {
-        "nodemon": "^1.14.12"
+        "react": "16.5.2",
+        "react-dom": "16.5.2"
     }
 }

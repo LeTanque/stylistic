@@ -1,25 +1,25 @@
-import React from "../js/react-dev.js";
+import React from "react";
 
 const App = () => {
     return (
         <>
             <div id="custom-bg"></div>
             <div id="custom-bg-preview"></div>
-            {/* <!-- Container for the OneGoogleBar HTML. --> */}
+
             <div id="one-google"></div>
 
             <div id="ntp-contents">
                 <div id="logo">
-                    {/* <!-- The logo that is displayed in the absence of a doodle. --> */}
+
                     <div id="logo-default" title="Google"></div>
-                    {/* <!-- Logo displayed when theme prevents doodles. Doesn't fade. --> */}
+
                     <div id="logo-non-white" title="Google"></div>
-                    {/* <!-- A doodle, if any: its link and image. --> */}
+
                     <div id="logo-doodle">
                         <div id="logo-doodle-container">
                             <div id="logo-doodle-wrapper">
                                 <button id="logo-doodle-button">
-                                    <img id="logo-doodle-image" tabindex="-1"></img>
+                                    <img id="logo-doodle-image" tabIndex={-1}></img>
                                 </button>
                             </div>
                         </div>
@@ -33,10 +33,10 @@ const App = () => {
                         <div id="fakebox-text"></div>
                         <input
                             id="fakebox-input"
-                            autocomplete="off"
-                            tabindex="-1"
+                            autoComplete="off"
+                            tabIndex={-1}
                             type="url"
-                            aria-hidden="true"
+                            aria-hidden={true}
                         />
                         <div id="fakebox-cursor"></div>
                     </div>
@@ -48,34 +48,34 @@ const App = () => {
                         <input
                             id="realbox"
                             type="search"
-                            autocomplete="off"
-                            spellcheck="false /"
+                            autoComplete="off"
+                            spellCheck="false /"
                             aria-live="polite"
-                            autofocus
+                            autoFocus
                         />
                         <div id="realbox-matches"></div>
                     </div>
                 </div>
 
                 <div id="user-content">
-                    {/* <!-- Search suggestions will be inserted here. --> */}
+
                     <div id="most-visited">
-                        {/* <!-- The container for the tiles. The MV iframe goes in here. --> */}
+
                         <div id="mv-tiles"></div>
                     </div>
                 </div>
 
-                {/* <!-- Notification shown when the tiles are modified. --> */}
+
                 <div id="mv-notice-container">
                     <div id="mv-notice" className="notice-hide" role="alert">
                         <span id="mv-msg"></span>
-                        {/* <!-- Links in the notification. --> */}
+
                         <span id="mv-notice-links">
-                            <span id="mv-undo" className="ripple" tabindex="0" role="button"></span>
+                            <span id="mv-undo" className="ripple" tabIndex={0} role="button"></span>
                             <span
                                 id="mv-restore"
                                 className="ripple"
-                                tabindex="0"
+                                tabIndex={0}
                                 role="button"
                             ></span>
                         </span>
@@ -93,13 +93,13 @@ const App = () => {
                         <span
                             id="error-notice-link"
                             className="ripple"
-                            tabindex="0"
+                            tabIndex={0}
                             role="button"
                         ></span>
                     </div>
                 </div>
 
-                <div id="edit-bg" tabindex="0" role="button" hidden>
+                <div id="edit-bg" tabIndex={0} role="button" hidden>
                     <div id="edit-bg-icon"></div>
                     <span id="edit-bg-text">Customize</span>
                 </div>
@@ -110,11 +110,11 @@ const App = () => {
             <dialog div id="edit-bg-dialog">
                 <div id="edit-bg-menu">
                     <div id="edit-bg-title"></div>
-                    <div id="edit-bg-default-wallpapers" className="bg-option" tabindex="0">
+                    <div id="edit-bg-default-wallpapers" className="bg-option" tabIndex={0}>
                         <div className="bg-option-img"></div>
                         <div id="edit-bg-default-wallpapers-text" className="bg-option-text"></div>
                     </div>
-                    <div id="edit-bg-upload-image" className="bg-option" tabindex="0">
+                    <div id="edit-bg-upload-image" className="bg-option" tabIndex={0}>
                         <div className="bg-option-img"></div>
                         <div id="edit-bg-upload-image-text" className="bg-option-text"></div>
                     </div>
@@ -122,7 +122,7 @@ const App = () => {
                     <div
                         id="custom-links-restore-default"
                         className="bg-option bg-option-disabled"
-                        tabindex="0"
+                        tabIndex={0}
                     >
                         <div className="bg-option-img"></div>
                         <div
@@ -133,7 +133,7 @@ const App = () => {
                     <div
                         id="edit-bg-restore-default"
                         className="bg-option bg-option-disabled"
-                        tabindex="0"
+                        tabIndex={0}
                     >
                         <div className="bg-option-img"></div>
                         <div id="edit-bg-restore-default-text" className="bg-option-text"></div>
@@ -160,22 +160,22 @@ const App = () => {
 
             <dialog id="bg-sel-menu" className="customize-dialog">
                 <div id="bg-sel-title-bar">
-                    <div id="bg-sel-back-circle" tabindex="0" role="button">
+                    <div id="bg-sel-back-circle" tabIndex={0} role="button">
                         <div id="bg-sel-back"></div>
                     </div>
                     <div id="bg-sel-title"></div>
                 </div>
-                <div id="bg-sel-tiles" tabindex="0"></div>
+                <div id="bg-sel-tiles" tabIndex={0}></div>
                 <div id="bg-sel-footer">
                     <button
                         id="bg-sel-footer-cancel"
                         className="bg-sel-footer-button paper secondary ripple"
-                        tabindex="0"
+                        tabIndex={0}
                     ></button>
                     <button
                         id="bg-sel-footer-done"
                         className="bg-sel-footer-button paper primary ripple"
-                        tabindex="-1"
+                        tabIndex={-1}
                     ></button>
                 </div>
             </dialog>
@@ -185,10 +185,10 @@ const App = () => {
                     <button
                         id="backgrounds-button"
                         className="menu-option"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tab"
                         aria-controls="backgrounds-menu backgrounds-image-menu"
-                        aria-selected="true"
+                        aria-selected={true}
                         aria-labelledby="backgrounds-menu-option"
                         title="Background"
                     >
@@ -202,10 +202,10 @@ const App = () => {
                     <button
                         id="shortcuts-button"
                         className="menu-option"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tab"
                         aria-controls="shortcuts-menu"
-                        aria-selected="false"
+                        aria-selected={false}
                         aria-labelledby="shortcuts-menu-option"
                         title="Shortcuts"
                     >
@@ -219,10 +219,10 @@ const App = () => {
                     <button
                         id="colors-button"
                         className="menu-option"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tab"
                         aria-controls="colors-menu"
-                        aria-selected="false"
+                        aria-selected={false}
                         aria-labelledby="colors-menu-option"
                         title="Color and theme"
                     >
@@ -238,7 +238,7 @@ const App = () => {
                     <div id="menu-header">
                         <div
                             id="menu-back-circle"
-                            tabindex="0"
+                            tabIndex={0}
                             role="button"
                             aria-label="Back"
                             title="Back"
@@ -266,7 +266,7 @@ const App = () => {
                     <div
                         id="backgrounds-menu"
                         className="menu-panel"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tabpanel"
                         aria-label="Background"
                     >
@@ -274,10 +274,10 @@ const App = () => {
                             <div
                                 id="backgrounds-upload-icon"
                                 className="bg-sel-tile"
-                                tabindex="-1"
+                                tabIndex={-1}
                                 role="button"
                                 aria-label="Upload from device"
-                                aria-pressed="false"
+                                aria-pressed={false}
                                 title="Upload from device"
                             >
                                 <div id="backgrounds-upload-arrow"></div>
@@ -288,11 +288,11 @@ const App = () => {
                             <div
                                 id="backgrounds-default-icon"
                                 className="bg-sel-tile"
-                                tabindex="-1"
+                                tabIndex={-1}
                                 role="button"
                                 aria-label="No background"
                                 title="No background"
-                                aria-pressed="false"
+                                aria-pressed={false}
                             >
                                 <div className="mini-page">
                                     <div className="mini-header-colorful"></div>
@@ -305,14 +305,14 @@ const App = () => {
                     <div
                         id="backgrounds-image-menu"
                         className="menu-panel"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tabpanel"
                         aria-label="Background"
                     ></div>
                     <div
                         id="backgrounds-disabled-menu"
                         className="menu-panel"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tabpanel"
                         aria-label="Background"
                     >
@@ -326,7 +326,7 @@ const App = () => {
                     <div
                         id="shortcuts-menu"
                         className="menu-panel"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tabpanel"
                         aria-label="Shortcuts"
                     >
@@ -335,9 +335,9 @@ const App = () => {
                                 <div
                                     id="sh-option-cl"
                                     className="sh-option-image"
-                                    tabindex="-1"
+                                    tabIndex={-1}
                                     role="button"
-                                    aria-pressed="false"
+                                    aria-pressed={false}
                                     aria-labelledby="sh-option-cl-title"
                                     title="My shortcuts"
                                 >
@@ -358,9 +358,9 @@ const App = () => {
                                 <div
                                     id="sh-option-mv"
                                     className="sh-option-image"
-                                    tabindex="-1"
+                                    tabIndex={-1}
                                     role="button"
-                                    aria-pressed="false"
+                                    aria-pressed={false}
                                     aria-labelledby="sh-option-mv-title"
                                     title="Most visited sites"
                                 >
@@ -389,7 +389,7 @@ const App = () => {
                                     <input
                                         id="sh-hide-toggle"
                                         type="checkbox"
-                                        tabindex="-1"
+                                        tabIndex={-1}
                                         aria-labelledby="sh-hide-title"
                                     />
                                     <span className="toggle">
@@ -403,11 +403,11 @@ const App = () => {
                     <div
                         id="colors-menu"
                         className="menu-panel"
-                        tabindex="0"
+                        tabIndex={0}
                         role="tabpanel"
                         aria-label="Color and theme"
                     >
-                        <div id="colors-theme" tabindex="0">
+                        <div id="colors-theme" tabIndex={0}>
                             <div id="colors-theme-icon"></div>
                             <div id="colors-theme-info">
                                 <div id="colors-theme-name"></div>
@@ -424,27 +424,27 @@ const App = () => {
                             <div
                                 id="color-picker-tile"
                                 className="bg-sel-tile"
-                                tabindex="-1"
+                                tabIndex={-1}
                                 aria-label="Select color"
                                 title="Select color"
                                 role="button"
-                                aria-pressed="false"
+                                aria-pressed={false}
                             >
                                 <div id="left-semicircle"></div>
                                 <div id="color-picker-icon"></div>
-                                <input id="color-picker" type="color" style="display:none" />
+                                <input id="color-picker" type="color" style={{display:"none"}} />
                             </div>
                         </div>
                         <div id="colors-default" className="bg-sel-tile-bg">
                             <div
                                 id="colors-default-icon"
                                 className="bg-sel-tile"
-                                tabindex="-1"
+                                tabIndex={-1}
                                 aria-label="Default"
                                 title="Default"
-                                tabindex="-1"
+                                tabIndex={-1}
                                 role="button"
-                                aria-pressed="false"
+                                aria-pressed={false}
                             ></div>
                         </div>
                     </div>
@@ -475,11 +475,8 @@ const App = () => {
                     <div id="voice-outer" className="outer">
                         <div className="inner-container">
                             <div id="voice-button-container" className="button-container">
-                                {/* <!-- The audio level animation. --> */}
                                 <span id="voice-level" className="level"></span>
-                                {/* <!-- The microphone button. --> */}
                                 <span id="voice-button" className="button">
-                                    {/* <!-- The microphone icon (in CSS). --> */}
                                     <div className="microphone">
                                         <span className="receiver"></span>
                                         <div className="wrapper">
@@ -490,9 +487,7 @@ const App = () => {
                                 </span>
                             </div>
                             <div id="text-container" aria-live="polite">
-                                {/* <!-- Low confidence text underneath high confidence text. --> */}
                                 <span id="voice-text-i" className="voice-text"></span>
-                                {/* <!-- High confidence text on top of low confidence text. --> */}
                                 <span id="voice-text-f" className="voice-text"></span>
                             </div>
                         </div>

@@ -6,16 +6,16 @@
   "manifest_version": 2,
   "update_url": "https://github.com/letanque/stylistic",
   "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
   },
   "browser_action": {
     "default_title": "Stylistic~~~",
-    "default_popup": "background.html"
+    "default_popup": "views/background.html"
   },
   "chrome_url_overrides" : {
-    "newtab": "newtab/index.html"
+    "newtab": "index.html"
   },
   "content_scripts": [
     {
@@ -24,17 +24,17 @@
       ],
       "run_at": "document_idle",
       "js": [
-        "in-content.js",
-        "injectStyles.js"
+        "js/in-content.js",
+        "js/injectStyles.js"
       ],
       "css": [
-        "compiled.css"
+        "styles/compiled.css"
       ]
     }
   ],
   "background": {
     "scripts": [
-      "background.js"
+      "js/background.js"
     ],
     "persistent": false
   },
@@ -46,6 +46,6 @@
     "activeTab"
   ],
   "web_accessible_resources": [
-    "injectStyles.js"
+    "js/injectStyles.js"
   ]
 }

@@ -1,4 +1,14 @@
+body {
+    background-color: var(--dark-bg);
+}
+
+
+
+
 .custom-bg-body {
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3)), url("https://lh6.googleusercontent.com/proxy/l1UbR1gsoYN-hZbx61VzGl5uqcnI33psXie_yhsNYJCDTywomhzGtmAPrNyAnx-z6LESlH9_c8SHt4UIRSAqzOiSi51Uq9IR3zqZglqoNxyeqrFzogNbLZm2FY7fVBFEFAlu0QU=w3840-h2160-p-k-no-nd-mv"); 
+    background-size: cover;
     opacity: 1;
+    display: block;
+    width: 100%;
 }
