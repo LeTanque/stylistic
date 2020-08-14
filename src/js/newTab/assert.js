@@ -17,7 +17,7 @@
  * @closurePrimitive {asserts.truthy}
  * @suppress {reportUnknownTypes} because T is not sufficiently constrained.
  */
-/* #export */ function assert(condition, opt_message) {
+export function assert(condition, opt_message) {
   if (!condition) {
     let message = 'Assertion failed';
     if (opt_message) {

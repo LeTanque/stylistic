@@ -5,16 +5,12 @@ const App = () => {
         <>
             <div id="custom-bg"></div>
             <div id="custom-bg-preview"></div>
-
             <div id="one-google"></div>
 
             <div id="ntp-contents">
                 <div id="logo">
-
                     <div id="logo-default" title="Google"></div>
-
                     <div id="logo-non-white" title="Google"></div>
-
                     <div id="logo-doodle">
                         <div id="logo-doodle-container">
                             <div id="logo-doodle-wrapper">
@@ -107,7 +103,7 @@ const App = () => {
                 <div id="custom-bg-attr"></div>
             </div>
 
-            <dialog div id="edit-bg-dialog">
+            <dialog id="edit-bg-dialog">
                 <div id="edit-bg-menu">
                     <div id="edit-bg-title"></div>
                     <div id="edit-bg-default-wallpapers" className="bg-option" tabIndex={0}>

@@ -100,3 +100,5 @@ animations.addRippleAnimations = function() {
     rippleElements[i].addEventListener('mousedown', ripple);
   }
 };
+
+export default animations;

@@ -2478,3 +2478,5 @@ function colorArrayToHex(color) {
   return '#' + rgbComponentToHex(color[0]) + rgbComponentToHex(color[1]) +
       rgbComponentToHex(color[2]);
 }
+
+export default customize;

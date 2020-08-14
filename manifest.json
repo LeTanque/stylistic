@@ -38,14 +38,11 @@
     ],
     "persistent": false
   },
-  "content_security_policy": "default-src 'self'; script-src-elem 'self' 'unsafe-inline' https://unpkg.com; img-src * data: 'self' https://lh6.googleusercontent.com ; child-src chrome-search://most-visited/ https://*.google.com/ ;",
+  "content_security_policy": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline' https://unpkg.com; img-src * data: 'self' https://lh6.googleusercontent.com ; child-src chrome-search://most-visited/ https://*.google.com/ ;",
   "offline_enabled": true,
   "permissions": [
     "tabs",
     "<all_urls>",
     "activeTab"
-  ],
-  "web_accessible_resources": [
-    "js/injectStyles.js"
   ]
 }

@@ -25,6 +25,9 @@ let iframesAndVoiceSearchDisabledForTesting = false;
 let tilesAreLoaded = false;
 
 import configData from "./config.js";
+import customize from "./customize";
+import utils from "./utils";
+import og from "./one-google";
 import { getElem } from "./utils.js";
 
 /**

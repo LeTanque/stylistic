@@ -1,7 +1,7 @@
 // Copyright 2018 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
-
+var ddl = {"dark_image":null,"image":null,"metadata":null,"usable":true,"v":80};
 const doodles = {};
 
 doodles.numDdllogResponsesReceived = 0;
@@ -715,3 +715,5 @@ doodles.updateShareDialog = function() {
   };
   copyButton.title = configData.translatedStrings.copyLink;
 };
+
+export default doodles;

@@ -7,7 +7,7 @@
  * @enum {string}
  * @const
  */
-const CLASSES = {
+const CLASSES_UTILS = {
   MAC: 'mac',                            // Applies MacOS specific properties.
   WIN: 'win',                            // Applies Windows specific properties.
   MOUSE_NAVIGATION: 'mouse-navigation',  // Removes blue focus ring.
@@ -28,15 +28,16 @@ export const getElem = (id) => {
  */
 const utils = {};
 
+utils.CLASSES_UTILS = CLASSES_UTILS
 /**
  * Disables the focus outline for |element| on mousedown.
  * @param {Element} element The element to remove the focus outline from.
  */
 utils.disableOutlineOnMouseClick = function(element) {
   element.addEventListener('mousedown', () => {
-    element.classList.add(CLASSES.MOUSE_NAVIGATION);
+    element.classList.add(CLASSES_UTILS.MOUSE_NAVIGATION);
     element.addEventListener('blur', () => {
-      element.classList.remove(CLASSES.MOUSE_NAVIGATION);
+      element.classList.remove(CLASSES_UTILS.MOUSE_NAVIGATION);
     }, {once: true});
   });
 };
@@ -56,9 +57,9 @@ utils.isSchemeAllowed = function(url) {
  */
 utils.setPlatformClass = function(element) {
   element.classList.toggle(
-      CLASSES.WIN, navigator.userAgent.indexOf('Windows') > -1);
+      CLASSES_UTILS.WIN, navigator.userAgent.indexOf('Windows') > -1);
   element.classList.toggle(
-      CLASSES.MAC, navigator.userAgent.indexOf('Mac') > -1);
+      CLASSES_UTILS.MAC, navigator.userAgent.indexOf('Mac') > -1);
 };
 
 /**
@@ -80,3 +81,5 @@ utils.substituteString = function(label, var_args) {
     return m === '$$' ? '$' : varArgs[m[1]];
   });
 };
+
+export default utils;

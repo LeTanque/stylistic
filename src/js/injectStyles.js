@@ -6,4 +6,3 @@ newLinkElement.setAttribute("type", "text/css")
 newLinkElement.setAttribute("href", path)
 
 document.querySelector("head").appendChild(newLinkElement);
-
